@@ -2,6 +2,17 @@ site_name: 我的笔记本
 site_url: https://MaHuaqing2049.github.io/
 theme:
   name: material
+  features:
+    - navigation.tabs
+    - navigation.expand
+  markdown_extensions:
+    - attr_list
+    - admonition
+    - codehilite
+  extra_css:
+    - stylesheets/extra.css
 
 nav:
   - 首页: index.md
+  - 读书笔记:
+    -CSAPP/ICS: ICS.md
