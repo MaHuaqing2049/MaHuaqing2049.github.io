@@ -15,4 +15,4 @@ theme:
 nav:
   - 首页: index.md
   - 读书笔记:
-    -CSAPP/ICS: ICS.md
+    - CSAPP/ICS: ICS.md
