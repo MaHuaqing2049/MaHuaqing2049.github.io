@@ -16,3 +16,5 @@ nav:
   - 首页: index.md
   - 读书笔记:
     - CSAPP/ICS: ICS.md
+  - leetcode:
+    - 二分查找和双指针-9-27-2025: leetcode/二分查找和双指针.md
