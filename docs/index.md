@@ -1,6 +1,15 @@
-# 欢迎来到我的知识库
+# 欢迎来到2049的NoteBook
 
-这里是我个人学习和工作的笔记整理。
+> 这里是2049个人学习和工作的笔记整理。
+
+<div class="poem-section">
+  <p class="poem-text">
+    长沟流月去无声<br>
+    杏花疏影里<br>
+    吹笛到天明
+  </p>
+  <p class="poem-author">—— 宋·陈与义《临江仙》</p>
+</div>
 
 ## 主要内容
 

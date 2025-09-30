@@ -1,16 +1,22 @@
 site_name: 我的笔记本
 site_url: https://MaHuaqing2049.github.io/
+
 theme:
   name: material
   features:
     - navigation.tabs
     - navigation.expand
-  markdown_extensions:
-    - attr_list
-    - admonition
-    - codehilite
-  extra_css:
-    - stylesheets/extra.css
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - 首页: index.md
@@ -18,3 +24,4 @@ nav:
     - CSAPP/ICS: ICS.md
   - leetcode:
     - 二分查找和双指针-9-27-2025: leetcode/二分查找和双指针.md
+    - 解锁成就记录: leetcode/achivements.md

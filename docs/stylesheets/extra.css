@@ -1,0 +1,138 @@
+/* 诗词容器样式 - 淡雅向左对齐版本 */
+.poem-section {
+  margin: 3rem 0;
+  padding: 2.5rem;
+  text-align: left;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(180, 180, 220, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(200, 180, 220, 0.1) 0%, transparent 40%),
+    linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  box-shadow: 
+    0 4px 20px rgba(0,0,0,0.06),
+    inset 0 1px 0 rgba(255,255,255,0.8);
+  border: 1px solid rgba(220, 220, 230, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+/* 更柔和的纹理效果 */
+.poem-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="10" cy="15" r="0.8" fill="%23999" opacity="0.05"/><circle cx="85" cy="35" r="0.6" fill="%23999" opacity="0.03"/><circle cx="45" cy="75" r="0.7" fill="%23999" opacity="0.04"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+}
+
+/* 诗词正文样式 - 向左对齐 */
+.poem-text {
+  font-family: "STKaiti", "SimSun", "华文楷体", "Source Han Serif", serif;
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #5a5a7a;
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
+/* 作者信息样式 */
+.poem-author {
+  font-family: "STKaiti", "SimSun", serif;
+  font-size: 0.95rem;
+  color: #8a8a9a;
+  margin-top: 1.2rem;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0.08em;
+  text-align: left;
+  padding-left: 1rem;
+  border-left: 2px solid rgba(200, 200, 220, 0.5);
+}
+
+/* 深色模式适配 - 同样淡雅 */
+[data-md-color-scheme="slate"] .poem-section {
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(100, 100, 150, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(150, 100, 150, 0.08) 0%, transparent 40%),
+    linear-gradient(135deg, #2a2a3a 0%, #3a3a4a 100%);
+  border: 1px solid rgba(100, 100, 120, 0.4);
+  box-shadow: 
+    0 4px 20px rgba(0,0,0,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+[data-md-color-scheme="slate"] .poem-text {
+  color: #d0d0e0;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+[data-md-color-scheme="slate"] .poem-author {
+  color: #a0a0b0;
+  border-left-color: rgba(150, 150, 180, 0.4);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .poem-section {
+      margin: 2rem 0;
+      padding: 2rem 1.5rem;
+      border-radius: 10px;
+  }
+  
+  .poem-text {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      padding-left: 0.3rem;
+  }
+  
+  .poem-author {
+      padding-left: 0.8rem;
+      font-size: 0.9rem;
+  }
+}
+
+/* 淡入动画 */
+.poem-section {
+  animation: gentleFadeIn 1s ease-out;
+}
+
+@keyframes gentleFadeIn {
+  from {
+      opacity: 0;
+      transform: translateX(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* 更细腻的鼠标悬停效果 */
+.poem-section:hover {
+  transform: translateY(-1px);
+  box-shadow: 
+    0 6px 25px rgba(0,0,0,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.8);
+  border-color: rgba(200, 200, 220, 0.8);
+  transition: all 0.4s ease;
+}
+
+/* 为诗词行添加细微的间隔 */
+.poem-text br {
+  display: block;
+  content: "";
+  margin-bottom: 0.3rem;
+}
